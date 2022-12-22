@@ -11,6 +11,7 @@ class Library {
       let newBook = new Book(book.book, book.author, book.pages, book.read);
       this.books.push(newBook);
     }
+    this.updateLibrary();
   }
   
   updateLibrary = () => {
@@ -83,7 +84,5 @@ myLibrary.addBookButton.onclick = function(event) {
 
   event.preventDefault();
   myLibrary.addBookToLibrary(formObject);
-  myLibrary.updateLibrary();
   mainForm.reset();
-
 }
